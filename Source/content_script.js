@@ -31,7 +31,10 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bDonald Trump\b/g, "Primate");
+	v = v.replace(/Donald Trump/g, "Primate");
+	v = v.replace(/donald trump/g, "primate");
+	v = v.replace(/Trump/g, "Primate");
+	v = v.replace(/trump/g, "primate");
 	
 	textNode.nodeValue = v;
 }
